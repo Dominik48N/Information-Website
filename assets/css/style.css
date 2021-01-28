@@ -18,6 +18,10 @@ body,button,input,select,textarea {
     letter-spacing: .03em
 }
 
+.center {
+    text-align: center;
+}
+
 .navbar-avatar img {
     border-radius: 1000px;
     margin-right: .75rem;
