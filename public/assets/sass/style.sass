@@ -1,0 +1,200 @@
+body
+  display: flex
+  flex-direction: column
+  background: #f7f7f7
+  font-family: source sans pro, sans-serif
+
+button, input, select, textarea
+  font-family: source sans pro, sans-serif
+
+.navbar-avatar
+  display: flex
+  align-items: center
+  letter-spacing: 0.03em
+
+.center
+  text-align: center
+
+.navbar-avatar img
+  border-radius: 1000px
+  margin-right: .75rem
+
+.navbar-title
+  font-size: 1.3em
+  font-weight: 600
+
+.page-header.title
+  font-size: 2.5rem
+  font-weight: 600
+
+.profile-container
+  display: flex
+
+.profile
+  display: grid
+  grid-row-gap: 1rem
+  grid-column-gap: 1.5rem
+  grid-template-areas: 'image details' 'image buttons'
+  grid-template-rows: auto auto
+  grid-template-columns: 150px auto
+
+.profile-image
+  grid-area: image
+  align-self: center
+
+  img
+    width: 100%
+    max-width: 150px
+    height: auto
+
+.profile-details
+  grid-area: details
+  align-self: end
+
+.profile-buttons
+  grid-area: buttons
+  align-self: start
+
+  &.buttons
+    justify-content: center
+
+  img
+    width: 16px
+    height: 16px
+    margin-right: 0.4em
+
+@media screen and (max-width: 650px)
+  .profile
+    display: inline-grid
+    margin: 0
+    grid-row-gap: 1rem
+    grid-column-gap: 1rem
+    grid-template-areas: 'image details' 'buttons buttons'
+    grid-template-rows: auto auto
+    grid-template-columns: auto auto
+
+  .profile-image
+    grid-area: image
+    justify-self: end
+    align-self: center
+
+    img
+      max-width: 80px
+
+  .profile-details
+    justify-self: start
+    align-self: center
+
+  .profile.subtitle
+    color: #777
+
+    > span
+      vertical-align: middle
+
+  .profile-image img
+    border-radius: 1000px
+
+.menu
+  font-size: .9rem
+  font-weight: 400
+
+.menu-label
+  font-size: .85rem
+  font-weight: 600
+  color: #aaa
+
+  &:not(:first-child)
+    margin-top: 1.5em
+
+  &:not(:last-child)
+    margin-bottom: .4em
+
+.menu-list a
+  padding: .45em .65em
+
+  &.is-active
+    background-color: #dbe9ff
+    color: #3273dc
+
+.my-container
+  flex-grow: 1
+  margin: 0 auto
+  position: relative
+  width: 100%
+  max-width: 1344px
+
+.navbar > .my-container
+  align-items: stretch
+  display: flex
+  width: 100%
+
+@media screen and (max-width: 1023px)
+  .navbar > .my-container
+    display: block
+
+@media screen and (min-width: 1024px)
+  .navbar > .my-container
+    &.navbar-brand
+      padding-left: .75rem
+
+    &.navbar-menu
+      padding-right: .75rem
+
+body.has-navbar-fixed-top
+  padding-top: 3.25rem
+
+.navbar
+  min-height: 3.25rem
+
+.top-space-navbar
+  top: 3.25rem
+
+@media screen and (min-width: 1024px)
+  body.has-navbar-fixed-top
+    padding-top: 4.75rem
+
+  .navbar
+    min-height: 4.75rem
+
+  .top-space-navbar
+    top: 4.75rem
+
+.info-description
+  img
+    border-radius: 4px
+
+  &.buttons
+    margin-top: 1em
+    justify-content: flex-end
+
+  &.title
+    margin-bottom: .5rem
+
+  &.column
+    display: flex
+
+    > article
+      flex-grow: 1
+
+  &.media
+    align-items: stretch
+
+  &.media-content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    overflow-x: initial
+
+.message
+  &.is-warning
+    background-color: #fff4ca
+
+  &.is-danger
+    background-color: #ffdce3
+
+  &.is-info
+    background-color: #e1f4ff
+
+code
+  margin: 0 .15em
+  padding: .18em .3em
